@@ -38,14 +38,11 @@ async def upload_file(file: UploadFile = File(...), db: Session = Depends(get_db
     with open(file_location, "wb") as f:
         f.write(await file.read())
 
-    file_size = os.path.getsize(file_location)
-
     db_file = crud.create_file(
         db,
         filename=file.filename,
         filepath=file_location,
         filetype=file.content_type,
-        size=file_size
     )
     return db_file
 
