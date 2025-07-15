@@ -23,56 +23,52 @@ This is a fullstack Dropbox-like clone where users can:
 - **npm** (comes with Node.js)
 - **Git** (optional, for cloning repository)
 
+## QuickStart
+
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/anshgupta25/dropbox-clone.git
 cd dropbox-clone
-2️⃣ Install All Dependencies
+```
+
+### 2️⃣ Install All Dependencies
 Run the batch script to install dependencies for both frontend & backend:
 
-bash
-Copy
-Edit
+```bash
 setup_dependencies.bat
-Alternatively, install them manually:
+```
 
-🔵 Backend Setup
-bash
-Copy
-## 1️⃣ Clone the Repository
+or install them manually using
+
+### 🔵 Backend Setup
+```bash
 cd dropbox-clone-backend-python
 python -m venv venv
 venv\Scripts\activate
-## 2️⃣ Install Dependencies
-🟢 Frontend Setup
-bash
-Copy
-Edit
+pip install -r requirements.txt
+```
+### 🟢 Frontend Setup
+```bash
 cd ..\dropbox-clone-frontend
 npm install
-▶️ Running the Application
+```
+### ▶️ Running the Application
 Start Backend
-bash
-Copy
-Edit
+```bash
 cd dropbox-clone-backend-python
 venv\Scripts\activate
 uvicorn app.main:app --reload --port 8000
-## ▶️ Running the Application
-
-### Start Backend
+Runs at:
 👉 http://localhost:8000
-
+```
 Start Frontend
-bash
-Copy
-Edit
+```bash
 cd ..\dropbox-clone-frontend
 npm run dev
 Runs at:
 👉 http://localhost:5173
-
-✅ Features
+```
+### ✅ Features
 Upload: .txt, .png, .jpg, .json, .pdf
 
 View file content (Text, JSON, Images, PDFs)
@@ -83,7 +79,7 @@ See file metadata: filename, size, type, uploaded date
 
 Responsive frontend with Material UI
 
-🛠 Technology Stack
+### 🛠 Technology Stack
 Layer	Technology
 Backend	FastAPI (Python)
 Database	SQLite
